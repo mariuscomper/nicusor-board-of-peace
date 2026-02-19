@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicușor Dan la Board of Peace — Anatomia unei zile</title>
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="Nicușor Dan la Board of Peace — Anatomia unei zile">
+    <meta property="og:description" content="O analiză multidisciplinară a vizitei președintelui României la summitul lui Trump din 19 februarie 2026. Științe politice, sociologie, psihologie, antropologie, semiotică, teoria jocurilor.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ro_RO">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #faf8f4;
+            --bg-secondary: #f0ece4;
+            --bg-dark: #1a1a2e;
+            --bg-card: #ffffff;
+            --text-primary: #1a1a2e;
+            --text-secondary: #4a4a5a;
+            --text-muted: #7a7a8a;
+            --accent: #2d4a7b;
+            --accent-light: #3d6098;
+            --accent-gold: #b8942e;
+            --accent-gold-light: #d4af37;
+            --border: #e0dcd4;
+            --shadow: 0 2px 20px rgba(26, 26, 46, 0.06);
+            --shadow-lg: 0 8px 40px rgba(26, 26, 46, 0.1);
+            --max-width: 720px;
+            --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 18px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-gold));
+            z-index: 1000;
+            transition: width 0.1s linear;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 6rem 2rem 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(45, 74, 123, 0.3) 0%, transparent 60%),
+                        radial-gradient(ellipse at 70% 50%, rgba(184, 148, 46, 0.15) 0%, transparent 60%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-label {
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent-gold-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Table of Contents */
+        .toc-container {
+            max-width: var(--max-width);
+            margin: -2rem auto 3rem;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .toc {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem 2.5rem;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+
+        .toc-title {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+        }
+
+        .toc li {
+            counter-increment: toc-counter;
+            margin-bottom: 0.5rem;
+        }
+
+        .toc li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+            padding: 0.3rem 0;
+            transition: color 0.2s, transform 0.2s;
+            border-radius: 4px;
+        }
+
+        .toc li a::before {
+            content: counter(toc-counter, decimal-leading-zero);
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--accent-gold);
+            font-weight: 400;
+            min-width: 1.5rem;
+        }
+
+        .toc li a:hover {
+            color: var(--accent);
+            transform: translateX(4px);
+        }
+
+        .toc-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 0.8rem 0;
+        }
+
+        /* Main Content */
+        .content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            scroll-margin-top: 2rem;
+        }
+
+        .section-number {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--accent-gold);
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        h2 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-primary);
+        }
+
+        h4 {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 2rem 0 0.8rem;
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Pullquote */
+        .pullquote {
+            border-left: 3px solid var(--accent-gold);
+            padding: 1.5rem 0 1.5rem 1.8rem;
+            margin: 2.5rem 0;
+            position: relative;
+        }
+
+        .pullquote p {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .pullquote .attribution {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-style: normal;
+            color: var(--text-muted);
+            margin-top: 0.8rem;
+            display: block;
+        }
+
+        /* Insight Card */
+        .insight-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+        }
+
+        .insight-card .card-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .insight-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Key Term */
+        .key-term {
+            background: linear-gradient(180deg, transparent 60%, rgba(184, 148, 46, 0.15) 60%);
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Mechanism List */
+        .mechanism-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .mechanism-list li {
+            padding: 0.8rem 0 0.8rem 1.8rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(224, 220, 212, 0.5);
+        }
+
+        .mechanism-list li:last-child {
+            border-bottom: none;
+        }
+
+        .mechanism-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.15rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-gold);
+        }
+
+        /* Flow Diagram */
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+        }
+
+        .flow-step {
+            background: var(--bg-card);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .flow-arrow {
+            color: var(--accent-gold);
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        /* Numbered process */
+        .process-step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .process-num {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.2rem;
+        }
+
+        .process-content p {
+            margin-bottom: 0.5rem;
+        }
+
+        .process-content strong {
+            color: var(--text-primary);
+        }
+
+        /* Separator */
+        .section-divider {
+            text-align: center;
+            margin: 4rem 0;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            letter-spacing: 0.5em;
+        }
+
+        /* Reference */
+        .ref {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Warning/highlight box */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(45, 74, 123, 0.06), rgba(184, 148, 46, 0.06));
+            border: 1px solid rgba(45, 74, 123, 0.15);
+            border-radius: 10px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            color: var(--text-primary);
+            font-weight: 400;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            padding: 3rem 2rem;
+            font-size: 0.75rem;
+        }
+
+        .footer .footer-title {
+            font-family: var(--font-serif);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 100;
+            font-size: 1.1rem;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            html { font-size: 16px; }
+            .hero { padding: 4rem 1.5rem 3.5rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero-meta { flex-direction: column; gap: 0.5rem; }
+            .toc { padding: 1.5rem; }
+            h2 { font-size: 1.5rem; }
+            h3 { font-size: 1.15rem; }
+            .pullquote { padding-left: 1.2rem; }
+            .pullquote p { font-size: 1.05rem; }
+            .flow { flex-direction: column; }
+            .insight-card { padding: 1.3rem 1.5rem; }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Print styles */
+        @media print {
+            .progress-bar, .back-to-top, .toc-container { display: none; }
+            .hero { background: #333; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-label">Științe politice &bull; Sociologie &bull; Psihologie &bull; Antropologie &bull; Semiotică &bull; Teoria jocurilor</div>
+            <h1>Nicușor Dan la Board of Peace — Anatomia unei zile</h1>
+            <p class="subtitle">Ce s-a întâmplat de fapt la Washington pe 19 februarie 2026, și ce ne spune despre statele mici, ordinea mondială în tranziție și condiția umană a diplomației.</p>
+            <div class="hero-meta">
+                <span>&#9679; Analiză multidisciplinară</span>
+                <span>&#9679; 19 februarie 2026</span>
+                <span>&#9679; ~45 min lectură</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <nav class="toc-container">
+        <div class="toc">
+            <div class="toc-title">&#9776; Cuprins</div>
+            <ol>
+                <li><a href="#fapte">Reconstituirea faptelor</a></li>
+                <li><a href="#stiinte-politice">Științe politice — Hedging și dilema statelor mici</a></li>
+                <li><a href="#sociologie">Sociologie — Ritualuri de curte și impression management</a></li>
+                <li><a href="#psihologie-sociala">Psihologie socială — Disonanță cognitivă și atribuire</a></li>
+                <li><a href="#evo-psy">Psihologie evoluționistă — Dominanță, subordonare și coaliții</a></li>
+                <li><a href="#antropologie">Antropologie — Patrimonialism, daruri și tribut</a></li>
+                <li><a href="#economie">Economie politică — Costul de oportunitate</a></li>
+                <li style="list-style:none;padding:0;margin:0.3rem 0"><span style="display:block;border-top:1px solid #e0dcd4"></span></li>
+                <li><a href="#corp-spatiu">Corpul și spațiul — O lectură fenomenologică</a></li>
+                <li><a href="#semiotica">Semiotica puterii — Logo, șapcă, nume greșit</a></li>
+                <li><a href="#europa">Dinamica intra-europeană — Cine a învins pe cine</a></li>
+                <li><a href="#psihanaliza">Psihologia profundă a observatorului</a></li>
+                <li><a href="#teoria-jocurilor">Teoria jocurilor și semnalizarea costisitoare</a></li>
+                <li><a href="#teoria-critica">Teoria critică — Hegemonie, lingvistică, estetică</a></li>
+                <li><a href="#sinteza">Sinteza finală — Despre ce e de fapt vorba</a></li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <!-- SECTION: Fapte -->
+        <section class="section fade-in" id="fapte">
+            <span class="section-number">01</span>
+            <h2>Reconstituirea faptelor</h2>
+
+            <p>Trump și-a convocat <strong>Board of Peace</strong> joi, 19 februarie 2026, cu reprezentanți din peste 40 de țări și observatori din încă o duzină, la U.S. Institute of Peace din Washington — rebotezat acum „Donald J. Trump U.S. Institute of Peace." Organizația a fost propusă în septembrie 2025 și formalizată la Davos în ianuarie 2026, primind mandat prin Rezoluția 2803 a Consiliului de Securitate ONU.</p>
+
+            <p>România a participat ca <strong>observator</strong>, alături de Italia. Din UE, doar Ungaria și Bulgaria au acceptat calitatea de membri deplini. Nicușor Dan a fost singurul lider european la nivel de șef de stat prezent ca observator — restul au trimis ambasadori sau funcționari de rang inferior.</p>
+
+            <h3>Cronologia zilei</h3>
+
+            <div class="insight-card">
+                <div class="card-label">Zborul</div>
+                <p>Dan a zburat la Washington cu un Bombardier Global 6000 închiriat de la Ion Țiriac, costul estimat: <strong>170.000–200.000 EUR</strong> tur-retur — relansând dezbaterea despre necesitatea unui avion prezidențial.</p>
+            </div>
+
+            <p><strong>La masă, lângă Blair.</strong> Dan a fost așezat la marginea stângă a rândului din mijloc, lângă Tony Blair — fost premier britanic care nu reprezintă nicio țară, ci un rol de consultant. Pe același rând: Karoline Leavitt și un alt oficial american. În față — ministrul de externe saudit și premierul albanez Edi Rama.</p>
+
+            <p><strong>Gafa „prim-ministru."</strong> Trump l-a prezentat pe Dan în discursul de deschidere numindu-l „prim-ministrul României." Exact: <em>„Prim-ministrul Dan al României, oameni minunați. Poporul român este fantastic, fantastic! Tu ești fantastic. Sunteți fantastici, iar mulți români vin și muncesc în această țară și ne ajută aici, sunt oameni cu adevărat de încredere."</em></p>
+
+            <p><strong>Discursul lui Dan (2 minute și 9 secunde).</strong> A caracterizat planul de pace al lui Trump drept „cuprinzător și stabil" și a oferit contribuții concrete ale României: evacuări medicale ale copiilor palestinieni (capacitate pentru 1.000 copii și 4.000 membri de familie), burse pentru studenți palestinieni, expertiză în construcția de instituții publice — poliție, justiție, administrație. A încheiat cu: <em>„you can count on us."</em></p>
+
+            <div class="pullquote">
+                <p>Un moment semnalat de presă: Dan a izbucnit în râs la jumătatea discursului, în timp ce vorbea despre „eforturile și rezultatele" lui Trump în alte părți ale lumii.</p>
+            </div>
+
+            <p><strong>Strângerea de mână și incidentul de securitate.</strong> La finalul întâlnirii, Dan s-a dus la Trump, i-a strâns mâna. Pe fondul muzical nu s-a auzit ce i-a spus Trump, dar pe buzele acestuia se citea ceva aprobator. Dan a vrut să prelungească discuția, dar un agent Secret Service a pus mâna discret pe el — suficient ca să revină la poziția sa. Același lucru li s-a întâmplat și altor lideri.</p>
+
+            <p><strong>Șapca MAGA și discuția cu Rubio.</strong> La finalul summitului, Dan a discutat câteva minute cu secretarul de stat Marco Rubio. Dan apare în fotografii cu o șapcă roșie MAGA în mână — participanții au primit de fapt șepci roșii inscripționate cu „USA." Dan este al doilea președinte român care primește o șapcă de la Trump — Iohannis a primit una albă cu „Make Romania Great Again" în 2019.</p>
+
+            <h3>Cifrele summitului</h3>
+            <p>Trump a anunțat că SUA contribuie cu <strong>10 miliarde USD</strong>, iar alte state membre au donat 7 miliarde. Cinci țări (Indonezia, Maroc, Kazahstan, Kosovo, Albania) s-au angajat cu trupe pentru o forță de stabilizare — obiectiv de 20.000 de soldați și 12.000 polițiști.</p>
+
+            <h3>Reacții interne românești</h3>
+            <ul class="mechanism-list">
+                <li><strong>Pro:</strong> Ministrul Apărării Radu Miruță: „S-a dus observator, a vorbit ca un observator și România a câștigat astăzi." Băsescu a lăudat prestația. Ambasadorul Muraru: „Casa Albă a fost extrem de încântată."</li>
+                <li><strong>Contra:</strong> Senatoarea PSD Victoria Stoiciu: „inutilă și goală de conținut" — „Rezultatul nu este respectul, ci umilința."</li>
+                <li><strong>Analitici:</strong> Mungiu-Pippidi: „nu cred că România va plăti în Europa pentru acest mic oportunism." Cristian Preda: Dan „contrariază și alegătorii săi, și prietenii europeni." Costi Rogozanu a criticat aspirația de a fi „și cu UE, și cu Trump."</li>
+            </ul>
+
+            <p><strong>Context european:</strong> Franța a criticat Comisia Europeană pentru prezență la eveniment. Viktor Orbán a declarat la summit că <em>„Ungaria este singura țară reprezentată aici la cel mai înalt nivel"</em> — ignorând prezența lui Dan sau, mai probabil, făcând distincția între membri și observatori.</p>
+        </section>
+
+        <!-- SECTION: Stiinte Politice -->
+        <section class="section fade-in" id="stiinte-politice">
+            <span class="section-number">02</span>
+            <h2>Științe politice — Arhitectura puterii și dilema hedging-ului</h2>
+
+            <p>Ce face Nicușor Dan la Washington este un manual de <span class="key-term">hedging</span> — strategia prin care statele mici își mențin relații simultan cu puteri potențial rivale. România se află pe linia de falie geopolitică a acestui moment: țară NATO și UE, dar dependentă de garanțiile de securitate americane (baza de la Deveselu, trupele de la Mihail Kogălniceanu), cu un război la 200 km de graniță.</p>
+
+            <p>Statutul de „observator" este o construcție politică ingenioasă — oferă prezență fără angajament. Este echivalentul diplomatic al unui <em>„venit la petrecere, dar stau la bar, nu dansez."</em> Permite accesul la informații fără să contravină formal pozițiilor UE. Modelul a fost „importat" de la Italia — Meloni a fost prima care l-a conceptualizat.</p>
+
+            <div class="highlight-box">
+                <p>Problema structurală: Board of Peace funcționează pe o logică fundamentalmente diferită de ordinea internațională liberală la care România aderă. Membrii trebuie să plătească <strong>1 miliard USD</strong> pentru un loc permanent, iar apartenența se reînnoiește la trei ani <strong>la discreția lui Trump</strong>. Este o structură patrimonială, nu instituțională — un organism de tip patron-client, nu un organism bazat pe reguli.</p>
+            </div>
+
+            <p>Diferența dintre ONU și Board of Peace este diferența dintre Weber și Machiavelli: primul e birocratic-legal, al doilea e personal-tranzacțional.</p>
+
+            <p>Trump însuși a articulat explicit viziunea suprainstitutțională: <em>„Board of Peace is going to almost be looking over the United Nations and making sure it runs properly."</em> Aceasta nu e complementaritate — <strong>e supraordonare</strong>. Un stat mic care participă la un organism care declară explicit că va „supraveghea" ONU se plasează într-o tensiune structurală cu ordinea pe care o susține.</p>
+
+            <h3>Teoria relațiilor internaționale</h3>
+            <p>România nu face nici <em>bandwagoning</em> (alinierea completă la puterea dominantă) nici <em>balancing</em> (contrabalansarea). Face ceea ce Randall Schweller a numit <span class="key-term">underbalancing</span> — un răspuns insuficient față de amenințare, combinat cu un răspuns insuficient și față de oportunitate. Statutul de observator este forma instituțională a underbalancing-ului: ești acolo, dar nu ești acolo.</p>
+
+            <p>Din perspectiva constructivistă (Wendt), ceea ce contează nu e doar cine a fost prezent, ci narativul care se construiește: dacă Board of Peace devine normalul, atunci cei care au fost acolo de la început câștigă statut; dacă eșuează, cei care au fost observatori pot spune <em>„am fost acolo, dar nu am semnat."</em></p>
+        </section>
+
+        <!-- SECTION: Sociologie -->
+        <section class="section fade-in" id="sociologie">
+            <span class="section-number">03</span>
+            <h2>Sociologie — Ritualuri de curte și impression management</h2>
+
+            <p>Ceea ce s-a desfășurat la Washington este un <span class="key-term">ritual de curte</span> în sensul sociologic al lui Norbert Elias. Summitul a avut „aspectul unei ședințe de corporație": Trump a vorbit lung, echipa sa scurt, iar invitații au avut discursuri „extrem de succinte" — Dan a vorbit 2 minute și 9 secunde. Aceasta este structura clasică a unei <strong>interacțiuni asimetrice de putere</strong>: cel dominant controlează timpul, spațiul și narativul.</p>
+
+            <h3>Goffman — Front stage și back stage</h3>
+            <p>Goffman ar fi analizat întregul eveniment ca un spectacol de <em>impression management</em>. Fiecare lider prezent performează loialitate în fața grupului, dar simultan negociază propria poziționare.</p>
+
+            <p>Dan stă lângă Blair — aceasta poate fi o coincidență logistică sau o semnalizare deliberată (Blair fiind asociat cu pragmatismul occidentalist, nu cu trumpismul). Primirea șepcii MAGA este un <em>gift exchange</em> în sensul maussian — un dar care obligă. Toți au primit-o, dar fiecare alege cum o poartă.</p>
+
+            <div class="pullquote">
+                <p>Dan a ținut-o „vizibil în mână, fără să o ofere vreunui consilier" — un mic dans între acceptare și distanță.</p>
+            </div>
+
+            <h3>Momentul strângerii de mână</h3>
+            <p>Momentul cu agentul Secret Service este textbook Goffman: Dan a încercat o <em>footing change</em> — schimbare de cadru interacțional — de la protocol la conversație personală. Agentul a reimpostat cadrul. Acest lucru li s-a întâmplat și altora, dar faptul că s-a întâmplat unui președinte de stat la o întâlnire multilaterală spune ceva despre <strong>distribuția reală a puterii din sală</strong>.</p>
+
+            <h3>Solidaritatea mecanică a lui Durkheim</h3>
+            <p>Ritualul colectiv al summitului — laudele obligatorii, contribuțiile anunțate, șepcile distribuite, fotografiile de grup — funcționează exact ca ritualurile colective durkheimiene: creează solidaritate mecanică prin performanță sincronizată. Că participanții cred sau nu în ce spun este irelevant; performanța în sine creează legătura.</p>
+        </section>
+
+        <!-- SECTION: Psihologie sociala -->
+        <section class="section fade-in" id="psihologie-sociala">
+            <span class="section-number">04</span>
+            <h2>Psihologie socială — Disonanță cognitivă și atribuire</h2>
+
+            <p>Dan operează într-un câmp de <span class="key-term">disonanță cognitivă masivă</span>. A fost ales președinte tocmai ca antidot la mișcarea pro-Trump din România (Georgescu, Simion). Victoria sa electorală a fost interpretată ca dovadă că preocupările față de direcția politică MAGA „have mobilized voters." Acum se află la masa celui pe care electoratul său l-a respins simbolic, primind o șapcă MAGA.</p>
+
+            <div class="flow">
+                <span class="flow-step">Ales contra mișcării pro-Trump</span>
+                <span class="flow-arrow">&#8594;</span>
+                <span class="flow-step">Stă la masa lui Trump</span>
+                <span class="flow-arrow">&#8594;</span>
+                <span class="flow-step">Primește șapcă MAGA</span>
+                <span class="flow-arrow">&#8594;</span>
+                <span class="flow-step">Raționalizează: „Nu alegem între SUA și UE"</span>
+            </div>
+
+            <p>Teoria disonanței cognitive (Festinger) prezice exact această raționalizare — și Dan o performează impecabil.</p>
+
+            <h3>Atribuirea fundamentală pe social media</h3>
+            <p>Reacțiile publicului românesc sunt fascinante din perspectiva <em>fundamental attribution error</em>. Comentatorii suveraniști au interpretat gafa „prim-ministru" ca un mesaj deliberat: <em>„Trump știe că președinte este Georgescu."</em></p>
+
+            <div class="insight-card">
+                <div class="card-label">Conspirativism atribuțional</div>
+                <p>Aceasta nu este analiză — este conspirativism atribuțional: ideea că <strong>toate acțiunile unei figuri puternice sunt intenționate, calculate, codificate</strong>. Este aceeași logică care alimentează Q-Anon și cultul personalității: liderul nu greșește niciodată, doar trimite semnale. Presupunerea unui plan sofisticat de delegitimizare vine de la un om care nu știe diferența dintre premier și președinte — o contradicție la un nivel absurd, dar funcțional: conspirativismul nu are nevoie de coerență, ci de narativ.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: Evo Psy -->
+        <section class="section fade-in" id="evo-psy">
+            <span class="section-number">05</span>
+            <h2>Psihologie evoluționistă — Dominanță, subordonare și coaliții</h2>
+
+            <p>Dinamica de la Washington e aproape un laborator de <span class="key-term">dominance hierarchy</span>. Trump controlează toate resursele: spațiul (institutul care acum îi poartă numele), timpul (el decide cine și cât vorbește), narativul (el stabilește cadrul discuțiilor) și recompensele simbolice (laudele individualizate, șepcile).</p>
+
+            <h3>Approach-avoidance în fața dominantului</h3>
+            <p>Comportamentul lui Dan după strângerea de mână — încercarea de a prelungi interacțiunea, urmată de retragere la intervenția „paznicului" — este un <strong>pattern clasic de approach-avoidance în fața dominantului</strong>. În etologie, animalele de rang inferior în ierarhie caută proximitate cu alfa pentru a-și consolida statutul, dar nu pot controla durata interacțiunii — alfa decide.</p>
+
+            <h3>Destabilizare urmată de validare</h3>
+            <p>Trump a comis gafa titulaturii, dar a compensat cu laudă interpersonală directă: <em>„tu ești fantastic."</em> Acest pattern — <strong>destabilizare urmată de validare</strong> — este bine documentat în psihologia influenței (Cialdini). Produce deferență sporită, nu resentiment, pentru că persoana primește un „cadou" imediat după un „cost".</p>
+
+            <div class="pullquote">
+                <p>Interesant din perspectivă evo-psy: participarea la Board of Peace funcționează ca un costly signal de loialitate de coaliție. Costul — reputațional, în raport cu UE — demonstrează angajamentul.</p>
+            </div>
+
+            <p>Trump a menționat explicit că a „girat" unii lideri prezenți — Milei, Takaichi — sugerând o <strong>structură de obligație reciprocă</strong>. Este structura primatelor: alfa distribuie atenție selectivă, iar receptarea atenției conferă rang.</p>
+        </section>
+
+        <!-- SECTION: Antropologie -->
+        <section class="section fade-in" id="antropologie">
+            <span class="section-number">06</span>
+            <h2>Antropologie — Patrimonialism, daruri și tribut</h2>
+
+            <p>Board of Peace este, din perspectivă antropologică, o <span class="key-term">structură neopatrimonialistă</span>. Taxa de 1 miliard USD nu este o „contribuție" în sens instituțional — este un tribut în sens weberian. Nu cumperi o funcție administrativă; cumperi acces la grația patronului. Reînnoirea la discreția lui Trump subliniază structura personalistă.</p>
+
+            <h3>Potlatch-ul modern</h3>
+            <p>Distribuția de șepci MAGA este un <strong>potlatch modern</strong> — un dar care comunică puterea donatorului și care, prin acceptare, creează obligație. Faptul că Gianni Infantino (FIFA) a pus șapca pe cap, iar Dan a ținut-o în mână, marchează diferite niveluri de acceptare a logicii potlatch-ului.</p>
+
+            <div class="insight-card">
+                <div class="card-label">Declarația patronală</div>
+                <p>Trump: <em>„Almost everybody's accepted, and the ones that haven't, will be. And some are playing a little cute — it doesn't work. You can't play cute with me."</em> — <strong>Aceasta este o articulare explicită a logicii patronale: refuzul nu este o opțiune; este doar o întârziere.</strong></p>
+            </div>
+
+            <h3>Kula vs. potlatch</h3>
+            <p>Discursul lui Dan — copii tratați, echipamente donate, expertiză — este o ofertă de <em>kula ring</em> (Malinowski), nu de potlatch. Kula-ul este un schimb ceremonial în care obiectele oferite nu sunt valoroase în sine, ci prin relația pe care o instituie. Dan nu oferă miliarde; oferă relația. <em>„You can count on us"</em> nu este o promisiune bugetară; este un angajament relațional.</p>
+
+            <div class="pullquote">
+                <p>Problema este că în economia Board of Peace, relația costă 1 miliard USD. Oferirea de „expertiză în ambulanțe" este touchingly inadecvat — ca și cum ai merge la o licitație Sotheby's cu o poezie. Nu e lipsit de valoare; este într-un registru greșit.</p>
+            </div>
+
+            <h3>Perspectiva istoriei românești</h3>
+            <p>România are o tradiție milenară de navigare între puteri mai mari. De la voievozii care plăteau tribut simultan otomanilor și habsburgilor, la Ceaușescu care se declara „independent" în blocul sovietic dar rămânea în Pactul de la Varșovia. Dan însuși a invocat „relațiile tradiționale" ale României atât cu Israelul, cât și cu lumea arabă — referire identificată rapid ca trimitere la era Ceaușescu.</p>
+
+            <div class="highlight-box">
+                <p>Ironia este profundă: un președinte ales ca antidot la naționalismul ceaușist invocă tocmai diplomația Ceaușescu pentru a-și justifica prezența la un organism neo-patrimonial condus de Trump.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: Economie -->
+        <section class="section fade-in" id="economie">
+            <span class="section-number">07</span>
+            <h2>Economie politică — Costul de oportunitate și semnalizarea</h2>
+
+            <p>Dintr-o perspectivă economic-rațională, prezența lui Dan este un calcul cost-beneficiu:</p>
+
+            <h3>Costuri</h3>
+            <ul class="mechanism-list">
+                <li><strong>Costuri directe:</strong> 170.000–200.000 EUR pentru zbor, costurile delegației, timp prezidențial</li>
+                <li><strong>Costuri de oportunitate:</strong> Dan a ratat Conferința de Securitate de la München (13–15 februarie) pentru a se pregăti de Washington. München este principalul forum de securitate european — tocmai formatul la care România ar avea cele mai multe de spus ca stat de frontieră. A preferat un format în care a vorbit 2 minute și 9 secunde</li>
+                <li><strong>Costuri reputaționale:</strong> Franța a criticat chiar și prezența Comisiei Europene. România, singura țară UE reprezentată la cel mai înalt nivel ca observator, se expune la etichetarea drept „calul troian" al Washingtonului în UE</li>
+            </ul>
+
+            <h3>Beneficii potențiale</h3>
+            <ul class="mechanism-list">
+                <li>Accesul informal la informații și consolidarea relației bilaterale după trauma anulării alegerilor din 2024</li>
+                <li>Semnalizarea pro-americană care poate conta la negocieri viitoare: reactoarele 3 și 4 de la Cernavodă, minerale rare, prezența militară americană</li>
+                <li>Contactul cu Rubio și pregătirea vizitei bilaterale la Casa Albă</li>
+            </ul>
+
+            <div class="insight-card">
+                <div class="card-label">Contextul economic intern</div>
+                <p>România a intrat în recesiune tehnică, datoria guvernamentală a depășit 60% din PIB pentru prima oară, iar Fitch a menținut rating-ul <strong>BBB- cu perspectivă negativă</strong>. Într-un mediu în care fiecare semnalizare contează pentru agențiile de rating, prezența la Washington poate fi citită ca angajament pro-stabilitate — sau ca frivolitate diplomatică.</p>
+            </div>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- SECTION: Corp si spatiu -->
+        <section class="section fade-in" id="corp-spatiu">
+            <span class="section-number">08</span>
+            <h2>Corpul și spațiul — O lectură fenomenologică</h2>
+
+            <p>Înainte de orice teorie, să reconstruim ce s-a întâmplat la nivel somatic. Corpul lui Dan în această zi ne spune mai mult decât toate comunicatele de presă.</p>
+
+            <h3>Proxemica perifericului</h3>
+            <p>Dan a fost plasat la marginea stângă a rândului din mijloc, la capăt. Nu la masa principală. Nu în câmpul vizual imediat al lui Trump. Lângă Tony Blair — care nu reprezintă nicio țară. Edward Hall ar fi clasificat această distanță ca <span class="key-term">„zonă socială" (1.2–3.6m)</span>, nu „zonă personală" — adică interacțiunea formală, nu intimitatea politică.</p>
+
+            <h3>Râsul — Trei ipoteze psihologice</h3>
+            <p>Dan „s-a fâstâcit în timpul declarațiilor și chiar l-a bufnit râsul atunci când a menționat realizările lui Trump." Concret: <em>„Vă mulțumesc pentru implicarea și leadershipul dumneavoastră... precum și pentru eforturile și rezultatele obținute în alte părți ale lumii"</em> — și a râs.</p>
+
+            <div class="process-step">
+                <div class="process-num">a</div>
+                <div class="process-content">
+                    <p><strong>Râsul anxios (nervous laughter)</strong></p>
+                    <p>Teoria Schachter-Singer: excitația fiziologică primește un label cognitiv din context. Într-un context de performanță publică, sub presiune, cu un public ostil potențial, arousal-ul fiziologic se poate exprima ca râs chiar în absența umorului.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="process-num">b</div>
+                <div class="process-content">
+                    <p><strong>Scăparea ironiei autentice</strong></p>
+                    <p>Dan este matematician de formație. „Rezultatele în alte părți ale lumii" — pronunțate în fața unor diplomați care știu exact cât de problematic e acest claim — produc o incongruență cognitivă pe care creierul o rezolvă prin râs. Teoria Kant-Spencer: <strong>râsul apare la rezolvarea bruscă a unei tensiuni între așteptare și realitate</strong>. Dan știe că laudele sunt exagerate. Corpul trădează ce mintea e dresată să suprime.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="process-num">c</div>
+                <div class="process-content">
+                    <p><strong>Micro-expresia de disconfort moral</strong></p>
+                    <p>Paul Ekman a documentat că oamenii afișează micro-expresii incompatibile cu mesajul verbal atunci când sunt în conflict moral. Dacă Dan crede sincer că Board of Peace este o inițiativă problematică, atunci laudele obligatorii produc un <strong>leaking — scurgerea necontrolată a informației emoționale suprimate</strong>.</p>
+                </div>
+            </div>
+
+            <div class="pullquote">
+                <p>Oricare ar fi explicația, momentul este devastator tocmai pentru că este autentic. Într-o lume de performanță politică totală, râsul involuntar este poate singurul lucru real care s-a întâmplat la tribune.</p>
+            </div>
+
+            <h3>Metafora fizicalizată</h3>
+            <p>Merleau-Ponty ar fi citit momentul strângerii de mână ca o <strong>revelație a corpului politic</strong>: corpul lui Dan vrea ceea ce mintea sa politică știe că nu poate avea — o interacțiune substanțială, un moment de recunoaștere reală. Corpul avansează, mâna se extinde, picioarele vor să rămână. Dar un alt corp — cel al agentului — îi reimpostează limitele.</p>
+
+            <div class="highlight-box">
+                <p>Este o metaforă fizicalizată a întregii relații România-SUA: <strong>ești binevenit, dar nu prea aproape. Poți da mâna, dar nu poți rămâne.</strong></p>
+            </div>
+
+            <p>Foucault ar fi recunoscut aici tehnicile de <em>disciplinare a corpurilor</em>: nu violență, ci „atingere discretă, suficientă" — controlul prin minimum de forță. Toți liderii din sală au fost supuși aceluiași regim de acces controlat. Aceasta este <strong>biopolitica securității</strong>: corpul suveranului american este sanctuar; accesul la el este rațat, distribuit, polițat.</p>
+        </section>
+
+        <!-- SECTION: Semiotica -->
+        <section class="section fade-in" id="semiotica">
+            <span class="section-number">09</span>
+            <h2>Semiotica puterii — Logo, șapcă, nume greșit</h2>
+
+            <p>Trei obiecte-semn din ziua de azi merită o decodare profundă.</p>
+
+            <h3>A. Logo-ul Board of Peace</h3>
+            <p>Logo-ul prezintă un glob care arată <strong>doar America de Nord</strong>, pus pe un scut flancat de ramuri de măslin, totul în auriu. Împrumutarea limbajului vizual al ONU nu citește ca aliniere — citește ca un shortcut spre credibilitate: asocierea fără constrângeri.</p>
+
+            <p>Acesta nu este un accident de design. Este o <span class="key-term">declarație cartografică de suveranitate</span>. Proiecția ONU — azimutală echidistantă centrată pe Polul Nord — a fost aleasă explicit pentru a nu privilegia nicio națiune. Board of Peace face invers: privilegiază explicit SUA și exclude Europa, Asia, Africa din centrul lumii. Culoarea aurie înlocuiește „UN Blue" — care fusese ales tocmai ca „opusul roșului, culoarea războiului."</p>
+
+            <div class="pullquote">
+                <p>România, care nici măcar nu apare pe acest glob, participă la un organism al cărui logo o face invizibilă. Aceasta este ceea ce Roland Barthes ar fi numit mitologie: un semn care naturalizează o relație de putere.</p>
+            </div>
+
+            <h3>B. Șapca MAGA</h3>
+            <p>Participanții au primit șepci roșii inscripționate cu „USA" — nu „MAGA" propriu-zis, dar forma, culoarea, fontul sunt identice. Aceasta este ceea ce în branding se numește <span class="key-term">line extension</span>: un produs derivat care moștenește echitatea de brand a originalului.</p>
+
+            <p>Toți au primit-o. Dar nimeni nu a fost obligat s-o poarte. Aceasta creează un <strong>gradient de supunere vizuală</strong>: de la acceptare totală (pe cap) la acceptare parțială (în mână) la respingere (nimeni nu a aruncat-o, evident).</p>
+
+            <div class="insight-card">
+                <div class="card-label">Marcel Mauss — Eseu despre dar</div>
+                <p>Darul care nu poate fi refuzat creează o obligație. Dar recipientul alege cum acceptă. <strong>A ține șapca în mână, fără a o pune pe cap dar fără a o ascunde, este exact locul ambiguității strategice în care Dan operează.</strong> Este echivalentul fizic al statutului de „observator": ești acolo, ai obiectul, dar nu l-ai îmbrăcat.</p>
+            </div>
+
+            <p>Dan este al doilea președinte român care primește o șapcă de la Trump. Iohannis a primit una albă cu „Make Romania Great Again" în 2019, la o întâlnire bilaterală la Casa Albă, cu agendă. Dan a primit-o la un eveniment multilateral, generic. <strong>Calitatea darului a scăzut.</strong> Aceasta reflectă, fără ironie, și calitatea atenției.</p>
+
+            <h3>C. „Prim-ministrul Dan"</h3>
+            <p>Trei lecturi posibile:</p>
+
+            <div class="process-step">
+                <div class="process-num">1</div>
+                <div class="process-content">
+                    <p><strong>Lectura realistă:</strong> Trump confundă titulatura. O face constant — a numit premierul Japoniei „președinte," a confundat țări. Este un pattern cognitiv, nu un mesaj.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="process-num">2</div>
+                <div class="process-content">
+                    <p><strong>Lectura conspirativă:</strong> „Trump știe că președinte este Georgescu." Presupune că Trump, care nu știe diferența dintre premier și președinte, are un plan sofisticat de delegitimizare. Contradictorie la un nivel absurd, dar funcțional: conspirativismul nu are nevoie de coerență.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="process-num">3</div>
+                <div class="process-content">
+                    <p><strong>Lectura structuralistă (cea mai interesantă):</strong> Din perspectiva lui Trump, distincția „președinte" vs. „premier" nu contează. Ce contează este cine a venit. Într-un sistem patrimonial, funcția formală e irelevantă — relevant e gradul de acces la patron. <strong>Trump nu greșește din ignoranță; greșește din dezinteres pentru structurile constituționale ale altor țări.</strong> Aceasta este un <em>tell</em>: nu contează ce ești acasă; contează ce ești la masa lui Trump.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Europa -->
+        <section class="section fade-in" id="europa">
+            <span class="section-number">10</span>
+            <h2>Dinamica intra-europeană — Cine a învins pe cine</h2>
+
+            <p>Un detaliu crucial a trecut pe sub radarul discuției românești: <strong>Orbán a declarat la summit: <em>„Hungary is the only country to be represented here on the highest level among the founding members from the European Union."</em></strong></p>
+
+            <p>Aceasta este o declarație de supremație simbolică care îl exclude deliberat pe Dan. Orbán face distincția „founding members" vs. „observers" pentru a-și revendica singurătatea la vârf.</p>
+
+            <div class="highlight-box">
+                <p>Din perspectiva lui Dan, aceasta este o <strong>umilință secundară</strong>: nu doar Trump l-a confundat cu un premier — Orbán l-a invizibilizat cu totul. Singurul alt european la nivel de șef de stat a declarat public că el este singurul european la nivel de șef de stat.</p>
+            </div>
+
+            <p>Aceasta dezvăluie <span class="key-term">structura competitivă a perifericilor</span>: România și Ungaria, vecini cu relații istorice complicate, concurează nu doar pe piața europeană, ci și pe piața atenției americane. Orbán, ca membru fondator, se diferențiază de Dan, observatorul. Este <strong>hierarhizarea în interiorul subordonării</strong>.</p>
+        </section>
+
+        <!-- SECTION: Psihanaliza -->
+        <section class="section fade-in" id="psihanaliza">
+            <span class="section-number">11</span>
+            <h2>Psihologia profundă a observatorului</h2>
+
+            <p>Statutul de „observator" merită o decompresie psihanalitică.</p>
+
+            <h3>Winnicott — Spațiul tranzițional</h3>
+            <p>„Observatorul" este o construcție psihică de tip <span class="key-term">transitional space</span> — un loc unde poți fi simultan înăuntru și afară. Copilul mic are un obiect tranzițional (păturică, jucărie) care nici este el, nici este mama; este ceva între. Statutul de observator funcționează la fel: România nici acceptă, nici refuză. Este un spațiu protejat de ambiguitate care permite explorarea fără angajament.</p>
+
+            <h3>Lacan — Privirea și dorința</h3>
+            <p>Observatorul este cel care privește. Dar în dinamica lacaniană, privirea este întotdeauna deja capturată de obiectul dorinței. Ce observă Dan? <strong>Observă accesul pe care nu îl are.</strong> Orbán vorbește ca membru. Arabia Saudită donează miliarde. Indonezia trimite trupe. Dan observă ceea ce nu este, ceea ce nu poate.</p>
+
+            <div class="pullquote">
+                <p>Aceasta produce ceea ce Lacan numește manque — lipsa care generează dorință. De aceea corpul lui Dan avansează spre Trump la final: dorința de completitudine, de acces, de recunoaștere.</p>
+            </div>
+
+            <h3>Melanie Klein — Splitting-ul spațiului public românesc</h3>
+            <p>Reacțiile românești se împart în <strong>idealizare și demonizare fără nuanță</strong>. „A câștigat" vs. „umilință." „Bun" vs. „rău." Aceasta este logica splitting-ului kleinian: obiectul (Dan la Washington) nu poate fi ținut simultan ca bun și rău.</p>
+
+            <p>Publicul românesc operează în ceea ce Klein numește <span class="key-term">poziția paranoid-schizoidă</span> — lumea este împărțită în obiecte bune (aliați, patrioți) și obiecte rele (trădători, vasali). Trecerea la poziția depresivă — în care obiectul poate fi simultan bun și rău, benefic și costisitor, necesar și insuficient — <strong>nu s-a produs</strong>.</p>
+        </section>
+
+        <!-- SECTION: Teoria jocurilor -->
+        <section class="section fade-in" id="teoria-jocurilor">
+            <span class="section-number">12</span>
+            <h2>Teoria jocurilor și semnalizarea costisitoare</h2>
+
+            <h3>Chicken game cu informație imperfectă</h3>
+            <p>UE (prin majoritate) alege să nu participe. România alege să participe ca observator. Câștigurile depind de ce fac ceilalți.</p>
+
+            <ul class="mechanism-list">
+                <li><strong>Dacă UE penalizează participanții:</strong> România plătește un cost diplomatic (izolată în UE, asociată cu Ungaria). Beneficiul (acces la SUA) este incert</li>
+                <li><strong>Dacă UE nu penalizează:</strong> România câștigă: a fost la masă, a semnalizat loialitate, n-a plătit nimic. Dar Franța a criticat deja Comisia Europeană — deci costul e non-trivial</li>
+                <li><strong>Dacă Board of Peace devine durabil:</strong> First-mover advantage — România e deja acolo. Dar probabilitatea e scăzută: președinție pe viață a lui Trump, taxa de 1 miliard, fără audit independent</li>
+                <li><strong>Dacă Board of Peace eșuează:</strong> Observatorii pot nega participarea semnificativă. Dar Dan a fost vizibil — singurul european la nivel de șef de stat ca observator. Negabilitatea e limitată</li>
+            </ul>
+
+            <div class="insight-card">
+                <div class="card-label">Echilibrul Nash</div>
+                <p>Dacă toți europenii boicotează, niciunul nu câștigă acces dar nimeni nu plătește costuri. Dacă unul singur merge, câștigă acces diferențiat dar plătește costuri de defecțiune. <strong>România a defectat prima dintre democrațiile europene.</strong> Funcționează doar dacă accesul diferențiat produce beneficii concrete — lucru neverificat.</p>
+            </div>
+
+            <h3>Handicap principle — Cui semnalizezi?</h3>
+            <p>Amotz Zahavi ar fi argumentat că semnalele costisitoare sunt credibile tocmai pentru că sunt costisitoare. Prezența lui Dan este un semnal costisitor: a pierdut München, a zburat cu un avion de 200K EUR, se expune criticilor interne. Dar cui?</p>
+
+            <ul class="mechanism-list">
+                <li><strong>Dacă americanilor:</strong> semnalul e primit, dar diluat. Trump a primit 40+ delegații. Dan este un semnal într-un ocean de semnale</li>
+                <li><strong>Dacă electoratului intern:</strong> pro-americanii văd validare; anti-trumpiștii văd supunere. Efectul net e ambiguu</li>
+                <li><strong>Dacă europenilor:</strong> efectul e net negativ. România trimite semnalul că e dispusă să defecteze de la pozițiile europene comune pentru acces unilateral la Washington</li>
+            </ul>
+
+            <div class="pullquote">
+                <p>Dar cel mai profund nivel: Dan semnalizează sieși. Prezența la Board of Peace este, într-un sens profund, un rite of passage — un ritual de trecere din statusul de politician local la cel de actor geopolitic. Că acest ritual a inclus o gafă, un agent de securitate și un râs involuntar — toate acestea sunt parte din ritual, nu aberații ale lui.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: Teoria critica -->
+        <section class="section fade-in" id="teoria-critica">
+            <span class="section-number">13</span>
+            <h2>Teoria critică — Hegemonie, lingvistică, estetică</h2>
+
+            <h3>Gramsci — Consimțirea hegemonică</h3>
+            <p>Board of Peace este un exercițiu de <span class="key-term">hegemonie gramsciană</span> în timp real. Hegemonia nu funcționează prin coerciție, ci prin consimțire. Țările nu sunt forțate să participe; sunt invitate. Invitația este formulată ca onoare (<em>„the most prestigious board ever assembled"</em>). Refuzul nu este pedepsit formal, dar este marcat.</p>
+
+            <p>Dan a consimțit. Și consimțirea a fost performată public: mulțumiri, laude, oferte de contribuție. <strong>Aceasta este exact mecanismul gramscian:</strong> subordonatul internalizează logica dominantului și o performează ca pe propria voință. <em>„Am venit pentru că este în interesul României"</em> — dar cine a definit interesul?</p>
+
+            <div class="highlight-box">
+                <p>Contrahegemonia ar fi fost: absența. Dar absența costă. Gramsci însuși a murit în închisoare; <strong>contrahegemonia are preț</strong>. România, cu recesiune tehnică, rating BBB- negativ, și război la graniță, nu-și permite luxul contrahegemoniei.</p>
+            </div>
+
+            <h3>Lingvistică aplicată — Ce spune și ce nu spune textul</h3>
+            <p>Discursul complet al lui Dan merită o analiză discourse-critică:</p>
+
+            <ul class="mechanism-list">
+                <li><strong>Lexic:</strong> Limbajul este relațional, nu tranzacțional. „We can," „we have done," „we can contribute," „you can count on us." Nicio cifră în dolari. Nicio obligație fermă. Doar disponibilitate. Aceasta e limba diplomatică a celor care nu au ce pune pe masă financiar</li>
+                <li><strong>Hedging lingvistic:</strong> „I think everyone desire peace" — „I think" este un hedge. „What Romania can do" — formulare a posibilului, nu a certului. „We can do for 1,000 children" — nu „we will do", ci „we can"</li>
+                <li><strong>Poziționare:</strong> Dan vorbește ca un ofertant, nu ca un decident. Nu cere nimic. Nu condiționează nimic. Nu critică nimic. Este o poziție de <em>unmarked subordination</em> — subordonare care nu se declară ca atare, dar se manifestă prin absența oricărei pretenții</li>
+                <li><strong>Engleza:</strong> Discursul e descris ca fiind „într-o engleză stricată", cu greșeli de exprimare. Într-o sală unde Orbán vorbește fluent, unde Blair este native speaker, imperfecțiunile lingvistice performează — involuntar — perifericalitatea</li>
+            </ul>
+
+            <h3>Estetica politică — Sublimul și grotescul</h3>
+            <p>Întregul eveniment oscilează între sublim (în sens kantian) și grotesc (în sens bahktinian).</p>
+
+            <p><strong>Sublimul:</strong> 40 de țări adunate pentru pace, miliarde promise, o forță de stabilizare de 20.000 de oameni, reconstrucția unui teritoriu devastat. Dacă funcționează, este grandios.</p>
+
+            <p><strong>Grotescul:</strong> Institutul Păcii redenumit după Trump. Logo auriu care elimină lumea. Taxa de 1 miliard. Președintele Board of Peace este Trump pe viață. Șepci MAGA distribuite liderilor mondiali. Un președinte de stat numit „premier." Un agent de securitate care te împinge discret.</p>
+
+            <div class="pullquote">
+                <p>Bahtin ar fi recunoscut acest carnaval — inversiunea temporară a ierarhiilor care, paradoxal, le confirmă. Când Nicușor Dan izbucnește în râs vorbind despre „rezultatele" lui Trump, atinge punctul camp al întregii zile: momentul în care performanța se prăbușește sub greutatea propriei ficțiuni.</p>
+                <span class="attribution">— Susan Sontag, „Notes on Camp": seriozitatea și absurdul devin indistincte</span>
+            </div>
+
+            <h3>Narcisismul instituțional</h3>
+            <p>Trump a redenumit U.S. Institute of Peace după sine. A spus că a fost „o surpriză" de la Rubio. A prezentat Board of Peace ca <em>„one of the most important and consequential things"</em> în care a fost implicat. Acest pattern — rebrandingul instituțional, grandiozitatea narativă, atribuirea de merite — creează un <strong>câmp gravitațional în care toți participanții sunt trași în orbita validării liderului</strong>.</p>
+
+            <p>Dan a intrat în acest câmp gravitațional și a performat conform protocolului: laudă pentru „leadership", mulțumiri, oferte de contribuție. Râsul care i-a scăpat vorbind despre „rezultate" poate fi interpretat ca un moment de <span class="key-term">micro-rezistență</span> — un semnal involuntar că performanța supunerii are limite.</p>
+        </section>
+
+        <div class="section-divider">&#9830; &#9830; &#9830;</div>
+
+        <!-- SECTION: Sinteza -->
+        <section class="section fade-in" id="sinteza">
+            <span class="section-number">14</span>
+            <h2>Sinteza finală — Despre ce e de fapt vorba</h2>
+
+            <div class="highlight-box">
+                <p>Ziua de azi nu este despre Gaza, nu este despre pace, nu este nici măcar despre relația România-SUA. <strong>Este despre reconfigurarea modului în care statele mici negociază existența într-o ordine în tranziție.</strong></p>
+            </div>
+
+            <p>România, stat mic pe flancul estic al NATO, cu recesiune, cu deficit, cu un război la graniță, cu o democrație recent validată după o criză electorală majoră, a trimis pe cel mai important om al ei la un organism creat de un lider care l-a inspirat pe omul împotriva căruia tocmai a câștigat alegerile.</p>
+
+            <p>A stat două minute la tribună, a promis ambulanțe și burse, a fost numit greșit, a râs nervos, a strâns o mână, a fost împins de un agent, a primit o șapcă, a vorbit cu Rubio pe hol, s-a întors acasă.</p>
+
+            <h3>Ce a obținut și ce nu</h3>
+            <p>Dan a obținut ce și-a propus: prezența la masă, strângerea de mână, laudele generice, contactul cu Rubio, pregătirea vizitei bilaterale. <strong>N-a obținut ce ar fi contat:</strong> o discuție bilaterală substanțială, un angajament specific pe securitate sau economie, sau măcar recunoașterea corectă a funcției pe care o deține.</p>
+
+            <h3>Costul invizibil</h3>
+            <p>Costul invizibil este cel mai mare: <strong>normalizarea unui format în care democrațiile liberale fac coadă pentru a fi validate de o structură personalistă</strong>. Faptul că participanții au primit șepci MAGA, că au avut fiecare câte 2 minute, că Trump a confundat titulatura unui șef de stat fără nicio consecință — toate acestea nu sunt gafe. <strong>Sunt semnale de putere.</strong></p>
+
+            <div class="pullquote">
+                <p>Faptul că Dan le-a acceptat cu „se mai întâmplă" arată nu lipsa de demnitate, ci absența alternativelor percepute — ceea ce este, probabil, cel mai important lucru de reținut din ziua de azi.</p>
+            </div>
+
+            <p>Ceea ce descriu nu este umilință. <strong>Este condiția.</strong> Condiția statului periferic în momentul în care ordinea multilaterală liberală este înlocuită de o ordine tranzacțional-patrimonialistă. Într-o lume în care pacea se cumpără cu 1 miliard de dolari, iar accesul la cel care o vinde se rațează prin agenți Secret Service, un stat care oferă „expertiză în ambulanțe" nu este umil — <strong>este onest</strong>. Și tocmai onestitatea aceasta este cea care doare.</p>
+
+            <div class="highlight-box">
+                <p>Momentul cel mai important al zilei nu este gafa, nu este strângerea de mână, nu este agentul de securitate. <strong>Este râsul.</strong> Momentul în care un matematician care a ajuns președinte, aflat la 7.000 km de acasă, într-o sală aurie numită după Trump, pronunțând laude protocolare într-o engleză imperfectă, nu se mai poate abține și izbucnește în râs vorbind despre „rezultate."</p>
+            </div>
+
+            <p>Acest râs conține tot: inadecvarea, anxietatea, ironia, vulnerabilitatea, luciditatea, absurdul. Este singura fracțiune de secundă din întreaga zi în care un om real a pătruns prin crusta performanței diplomatice.</p>
+
+            <div class="pullquote">
+                <p>Și este, probabil, cel mai important lucru pe care România l-a „trimis" la Washington.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-title">Nicușor Dan la Board of Peace — Anatomia unei zile</p>
+        <p>O analiză multidisciplinară: științe politice, sociologie, psihologie, antropologie, semiotică, teoria jocurilor, fenomenologie, psihanaliză, teoria critică.</p>
+        <p style="margin-top: 0.8rem; font-size: 0.65rem; color: rgba(255,255,255,0.35);">19 februarie 2026 &bull; Washington, D.C.</p>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Înapoi sus">&#8593;</button>
+
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            progressBar.style.width = progress + '%';
+        }
+        window.addEventListener('scroll', updateProgress, { passive: true });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        function toggleBackToTop() {
+            if (window.scrollY > 600) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }
+        window.addEventListener('scroll', toggleBackToTop, { passive: true });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Fade-in on scroll
+        const fadeEls = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        fadeEls.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
