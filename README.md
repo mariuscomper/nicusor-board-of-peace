@@ -5,3 +5,5 @@ O analiză multidisciplinară a vizitei președintelui României la summitul lui
 Științe politice, sociologie, psihologie, antropologie, semiotică, teoria jocurilor, fenomenologie, psihanaliză, teoria critică.
 
 **[Citește articolul](https://mariuscomper.github.io/nicusor-board-of-peace)**
+
+Pagina este autonomă: folosește fonturi de sistem, include teme luminoasă și întunecată și respectă preferința `prefers-reduced-motion`.
